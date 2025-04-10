@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Excalidraw Tabs Sender",
+  "version": "1.0",
+  "description": "Collects open tabs and sends them to Excalidraw.",
+  "permissions": ["tabs", "scripting"],
+  "host_permissions": [
+    "http://localhost/*",
+    "https://adesk.arthurblume.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/*", "https://adesk.arthurblume.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+} 
