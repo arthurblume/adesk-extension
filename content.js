@@ -15,4 +15,12 @@ document.body.appendChild(button);
 button.addEventListener('click', () => {
     console.log("Button clicked.");
     chrome.runtime.sendMessage({ action: 'sendTabs' });
+});
+
+// Add a message event listener to handle incoming messages
+window.addEventListener('message', (event) => {
+    // Validate the origin of the message
+    if (event.origin === 'http://localhost' || event.origin === 'https://adesk.arthurblume.com') {
+        console.log('Received message:', event.data);
+    }
 }); 

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Excalidraw Tabs Sender",
+  "name": "ADesk for Chrome",
   "version": "1.0",
-  "description": "Collects open tabs and sends them to Excalidraw.",
+  "description": "Lets ADesk help you organize your open Chrome tabs.",
   "permissions": ["tabs", "scripting"],
   "host_permissions": [
     "http://localhost/*",
